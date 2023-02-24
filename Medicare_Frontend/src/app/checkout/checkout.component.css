@@ -1,0 +1,47 @@
+.checkout{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.checkout h1{
+    text-align: center;
+}
+.checkout h3{
+    text-align:center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.common-form2 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 20px;
+    margin-top:0px;
+  }
+  .form-input2 {
+    height: 35px;
+    width: 500px;
+    margin-bottom: 20px;
+    border: 1px solid blueviolet;
+    padding-left: 15px;
+    color: blueviolet;
+  }
+  .form-button2 {
+    height: 35px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    cursor: pointer;
+  }
+  .summary h3{
+    text-align: center;
+}
+
+.summary ul {
+    border: 1px solid #ddd;
+    list-style-type: none;
+    padding: 15px;
+}
+.summary ul li{
+    display: flex;
+    justify-content: space-between;
+}

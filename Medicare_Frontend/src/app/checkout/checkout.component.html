@@ -1,0 +1,42 @@
+<div class="checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+      <div class="col-sm-7">
+      <form #orderData="ngForm" class="common-form2" (ngSubmit)="orderNow(orderData.value)">
+        <h4>Billing Address</h4>
+          Name :<input type="text" class="form-input2" name="name"  ngModel />
+          Email Address:<input type="text" class="form-input2" name="cardNo"  ngModel />
+          Contact Number:<input type="number" class="form-input2" name="phno" placeholder="Enter PhoneNumber " ngModel />
+          Address :<input type="text" class="form-input2" name="address" placeholder="Enter contact address" ngModel />
+          <h4>Payment Method</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">Credit Card</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label">Debit Card</label>
+            </div>
+            <br>
+             <input type="text" class="form-input2" name="cardNo" placeholder="Enter Card Numebr "  ngModel />
+             <input type="text" class="form-input2" name="cvv" placeholder="Enter CVV "  ngModel />
+             <input type="text" class="form-input2" name="expiration" placeholder="MM/YY"  ngModel />
+          <button class="form-button">Order Now</button>
+        </form>
+
+      </div>
+      <div class="col-sm-5 summary">
+        <h3>Summary</h3>
+        <ul>
+            <li> <span>Amount:</span><span>{{priceSummary.price}}</span></li>
+            <li> <span>Tax:</span><span>{{priceSummary.tax}}</span></li>
+            <li> <span>Delivery:</span><span>{{priceSummary.delivery}}</span></li>
+            <li> <span>Discount:</span><span>{{priceSummary.discount}}</span></li>
+            <li> <span><h4>Total</h4></span> <span><h4>{{priceSummary.total}}</h4></span></li>
+        </ul>
+
+      </div>
+
+     
+    </div>
+  </div>

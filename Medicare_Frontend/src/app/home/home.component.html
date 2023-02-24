@@ -1,0 +1,54 @@
+<ngb-carousel *ngIf="popularProducts">
+  <ng-template  *ngFor="let item of popularProducts" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <a routerLink="/details/{{item.productId}}"> <img class="product-header-image" src="{{item.productImg}}" alt="Random first slide">
+   </a>
+      </div>
+    <div class="carousel-caption">
+      <h3>{{item.productName}}</h3>
+      <p>{{item.productDesc}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<div class="row">
+  <div class="col-sm-3 form-check">
+   <div style="width:300px;border: 1px solid #ccc;"><h3>FILTERS</h3></div>
+   <div style="width:300px;border: 1px solid #ccc;">
+    <h4>Brands</h4>
+    <button class="buttonclass" (click)="filterBrand('Dolo')">Dolo</button>
+    <button class="buttonclass" (click)="filterBrand('Dolo')">Admol</button>
+    <button class="buttonclass" (click)="filterBrand('Dolo')">Febrex</button>
+    <button class="buttonclass" (click)="filterBrand('Dolo')">Doliprane</button>
+    <button class="buttonclass" (click)="filterBrand('Dolo')">Kidsuvi</button>
+    <button class="buttonclass" (click)="filterBrand('Dolo')">Malidens</button>
+    <button class="buttonclass" (click)="filterBrand('Dolo')">Parawal</button>
+    
+   </div>
+  </div>
+
+<div class=" col-sm-9 product-list-wrapper">
+    <h1>TRENDY PRODUCTS</h1>
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let item of trendyProducts">
+        <div class="product-item">
+          <img src="{{item.productImg}}" alt="">
+        <div class="product-details">
+          <h6 class="name-head">{{item.productName}}</h6>
+          <div class="product-price">
+            <h6>Price:{{item.productPrice}}</h6>
+          </div>
+          <div class="product-color">
+            <h6>Brand:{{item.brand}}</h6>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a routerLink="/details/{{item.productId}}">View Details</a>
+          <a href="">Add to Cart</a>
+    
+        </div>
+        </div>
+      </div>
+    
+    
+    </div>
+    </div>
